@@ -1,78 +1,60 @@
-# Human--Computer-Interactions-VR-AR
+# Interactive Learning with AR
+## Weekend 1: Foundations of Unity and ML Integration
+### Day 1: Setting Up and Unity Basics
+Objective: Introduce Unity and build a basic interactive scene.
 
- ## [Week 1: Lesson 1](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/Lessons/Week1/Lesson1)
- 
- ### Lecture 1:
- - Learn spatial computing and AI basics.
- - Conceptualize an AI-driven spatial computing application.
- ### Tutorial 1:
- - Basics of Machine Learning (ML) and Deep Learning
- - Relationship between Machine Learning and Deep Learning, with 
-emphasis on Convolutional Neural Networks (CNNs)
- - Introduction to YOLO (You Only Look Once)
-- Training a custom YOLO object detection model from scratch using 
-Darknet
- ### Assignment 1:
- - Practical exercises to enhance Machine Learning and Deep Learning skills
- - Utilization of popular Python libraries such as Scikit-learn, NumPy, and 
-Pandas
- - Training a custom YOLO model
- - Selection of a dataset for training the model
- - Application of custom data augmentations to prepare for model training
- - Hands-on experience in building and refining a deep learning model for 
-object detection
- #### Learning Outcome: 
- Understand spatial computing's role across industries and the 
-foundational principles of AI and deep learning.
- ## [Week 1: Lesson 2](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/Lessons/Week1/Lesson2)
- ### Lecture:
- - Explore Advanced deep learning integration.
- - Enhance the initial concept with AR/VR features.
- ### Tutorial:
- - Exploring object detection in virtual reality (VR) using Oculus Quest 2
- - Focusing on detecting various fruits using a YOLO object detection model
- - Utilizing Unity for VR development
- - Implementing object detection with YOLO (You Only Look Once)
- - Incorporating Flask as the Python web framework
- - Coding with PyCharm for Flask development and Visual Studio Code for 
-C# programming in Unity
-### Assignment: Custom Object Detection in Unity
- - Training a YOLO model with a custom dataset for object detection in 
-Unity
- - Incorporating custom objects or environments from the internet
- - Optionally recording personal environments or objects using 3D scanning 
-apps, subject to device compatibility
- #### Learning Outcomes: 
- Gain hands-on experience with spatial data analysis and learn to 
-enhance AR/VR applications using AI and Unity.
- ## [Week 2: Lesson 1](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/Lessons/Week2/Lesson1)
- ### Lecture:
- - Advance in spatial data analysis using SLAM (Simultaneous Localization 
-And Mapping).
- - Explainability using LLMs for Spatial Computing
- - Further develop the AR/VR application with AI interactivity.
-### Tutorial:
- - Introduction to advanced integration of Unity, YOLO, Flask, Large 
-Language Models (LLM), and SLAM (Simultaneous Localization And 
-Mapping) scanning
- - Creating an interactive spatial environment for robust object detection
- - Utilizing SLAM for a deeper understanding of surroundings and spatial 
-context
- - Integration of LLMs to process and interpret detected objects within their 
-spatial environment
- ### Assignment: SLAM-Enabled Object Detection with LLM Insights
- - Enhancing YOLO model training with a custom dataset for object 
-detection within a SLAM-enabled environment
- - Integrating SLAM technology to understand the spatial context of 
-detection
- - Utilizing LLM prompts to extract deeper insights and explanations from 
-object detection results
- - Enriching the interactive experience with spatial awareness and 
-interpretative depth
- #### Learning Outcome: Develop skills in SLAM and LLMs and deep learning model 
-integration for AR/VR.
-##  [Week 2: Session 2: Project Review/Presentation](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/Lessons/Week2/Lesson2)
- - Finalize AR/VR metaverse application with advanced AI and LLM features.
- - Prepare and deliver final presentations.
-#### Learning Outcome: Achieve proficiency in advanced AR/VR application development.
-and integration of deep learning and LLMs for spatial computing applications.
+#### Getting Started with Unity (1 hour)
+Download, install, and configure Unity.
+Overview of the Unity interface: Hierarchy, Scene, Game, Inspector, and Project tabs.
+#### Building the First Scene (2 hours)
+Adding objects (3D models, UI elements) and adjusting transforms.
+Adding physics components: Rigidbodies and colliders.
+#### Basic Interactions with Unity (1 hour)
+Adding scripts (in C#) to objects for interactivity.
+Example: Making an object move or react to user input.
+Hands-On:
+Create a virtual room with basic interactive objects (e.g., a button that triggers an animation).
+
+### Day 2: ML Basics and Unity Integration
+Objective: Introduce ML concepts and incorporate them into Unity.
+
+#### Introduction to ML for Non-Programmers (1 hour)
+Key concepts: What is ML, and how does it apply to AR/VR?
+Pre-trained models and their utility for non-experts.
+#### Object Recognition Using ML (2 hours)
+Overview of pre-trained object recognition models (e.g., MobileNet).
+How ML models process images and make predictions.
+#### Integrating ML into Unity (1 hour)
+Tools: Unity Barracuda or TensorFlow for Unity.
+Example: Setting up a real-time object detection pipeline in Unity.
+#### Hands-On:
+Create a Unity scene with a live camera feed and an object detection model that highlights detected objects in AR.
+
+## Weekend 2: Building the Final AR Project
+### Day 3: AR Development with Meta Oculuses
+Objective: Set up the Meta Oculus for AR and begin adding AR functionality.
+
+#### Introduction to AR with Unity (1 hour)
+Overview of AR in Unity and how it differs from VR.
+Setting up Unity for AR development (using the Meta Oculus SDK).
+#### Augmented Interactions (2 hours)
+Anchoring virtual objects in real-world spaces.
+Adding basic AR interactions (e.g., grabbing and moving objects).
+#### Enhancing AR Scenes (1 hour)
+Adding animations and sounds to make the experience more engaging.
+#### Hands-On:
+Build a scene where virtual objects are anchored to real-world positions and interact with the user’s input.
+
+### Day 4: Finalizing and Presenting the AR Project
+Objective: Combine the elements developed in previous sessions to create a functional AR project.
+
+#### Polishing the Experience (2 hours)
+Adding UI overlays (e.g., instructions or notifications).
+Debugging and improving interactions for a seamless user experience.
+#### Showcase Preparation (1 hour)
+Participants finalize their projects and test them with peers.
+#### Showcase and Feedback (1 hour)
+Participants present their AR applications to the group.
+Discuss challenges, solutions, and next steps.
+#### Hands-On:
+Complete and present the final AR project, incorporating object detection, interactions, and animations.
