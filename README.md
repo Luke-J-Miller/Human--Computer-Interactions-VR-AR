@@ -1,8 +1,6 @@
 # Human--Computer-Interactions-VR-AR
 
- ## Week 1: Lesson 1
- 
- [[test]]{https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/Lessons/Week1/Lesson1}
+ ## [Week 1: Lesson 1](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/Lessons/Week1/Lesson1)
  
  ### Lecture 1:
  - Learn spatial computing and AI basics.
