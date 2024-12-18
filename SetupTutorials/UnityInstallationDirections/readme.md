@@ -26,20 +26,22 @@ In this case, be ready to specify a username and password to create your Unity a
 To download the setup wizard for the Unity Hub, follow these instructions:
 1.  Go to the [Unity download](https://unity.com/download) page.
 Unity download page, including options to download the Unity Hub for various operating systems
+  
 ![image](https://github.com/user-attachments/assets/589105bf-3b5a-458f-90a7-a788a89dc27d)
 
 
 1.  Under 1. Download the Unity Hub, select the option for your operating system. A file will download named UnityHubSetup. This file name might vary depending on the Hub version and your operating system.
-![image](https://github.com/user-attachments/assets/aa7d290a-5fc3-4c21-9e57-c9f5b9e6ddab)
-
+    
+![image](https://github.com/user-attachments/assets/aa7d290a-5fc3-4c21-9e57-c9f5b9e6ddab)  
+  
 ## Install and launch the Unity Hub
 Next, follow these instructions to install and launch the Unity Hub:
 1.  Locate the UnityHubSetup file you downloaded previously.
 
 ![image](https://github.com/user-attachments/assets/35872525-1541-44fc-ae5a-101608f27f35)
 
-3.  Launch the UnityHubSetup installer.
-4.  Follow your platform instructions to install the Unity Hub. 
+2.  Launch the UnityHubSetup installer.
+3.  Follow your platform instructions to install the Unity Hub. 
 If you haven't already set up your Unity account, you'll be prompted to do so during this process.
 Proceed until you see the window that prompts you to install the Unity Editor, which we'll walk you through in the next step. 
 
