@@ -24,7 +24,7 @@ object detection
  #### Learning Outcome: 
  Understand spatial computing's role across industries and the 
 foundational principles of AI and deep learning.
- ## Week 1: Lesson 2
+ ## [Week 1: Lesson 2](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/Lessons/Week1/Lesson2)
  ### Lecture:
  - Explore Advanced deep learning integration.
  - Enhance the initial concept with AR/VR features.
@@ -45,7 +45,7 @@ apps, subject to device compatibility
  #### Learning Outcomes: 
  Gain hands-on experience with spatial data analysis and learn to 
 enhance AR/VR applications using AI and Unity.
- ## Week 2: Lesson 3
+ ## [Week 2: Lesson 1](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/Lessons/Week2/Lesson1)
  ### Lecture:
  - Advance in spatial data analysis using SLAM (Simultaneous Localization 
 And Mapping).
@@ -71,7 +71,7 @@ object detection results
 interpretative depth
  #### Learning Outcome: Develop skills in SLAM and LLMs and deep learning model 
 integration for AR/VR.
-##  Week 2: Session 4: Project Review/Presentation
+##  [Week 2: Session 2: Project Review/Presentation](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/Lessons/Week2/Lesson2)
  - Finalize AR/VR metaverse application with advanced AI and LLM features.
  - Prepare and deliver final presentations.
 #### Learning Outcome: Achieve proficiency in advanced AR/VR application development.
