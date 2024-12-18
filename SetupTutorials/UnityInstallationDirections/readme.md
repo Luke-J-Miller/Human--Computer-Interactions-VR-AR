@@ -35,9 +35,11 @@ Unity download page, including options to download the Unity Hub for various ope
 ## Install and launch the Unity Hub
 Next, follow these instructions to install and launch the Unity Hub:
 1.  Locate the UnityHubSetup file you downloaded previously.
-  ![image](https://github.com/user-attachments/assets/3005d607-a3b1-4669-aa8b-b1a94bc76a44)
-1.  Launch the UnityHubSetup installer.
-1.  Follow your platform instructions to install the Unity Hub. 
+
+![image](https://github.com/user-attachments/assets/35872525-1541-44fc-ae5a-101608f27f35)
+
+3.  Launch the UnityHubSetup installer.
+4.  Follow your platform instructions to install the Unity Hub. 
 If you haven't already set up your Unity account, you'll be prompted to do so during this process.
 Proceed until you see the window that prompts you to install the Unity Editor, which we'll walk you through in the next step. 
 
