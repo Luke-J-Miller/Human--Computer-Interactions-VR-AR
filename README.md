@@ -1,14 +1,14 @@
 # Human--Computer-Interactions-VR-AR
 
- Week 1: Lesson 1
- ⦁ Lecture 1:
- ⦁ Learn spatial computing and AI basics.
- ⦁ Conceptualize an AI-driven spatial computing application.
- ⦁ Tutorial 1:
- ⦁ Basics of Machine Learning (ML) and Deep Learning
- ⦁ Relationship between Machine Learning and Deep Learning, with 
+ ## Week 1: Lesson 1
+ ### Lecture 1:
+ - Learn spatial computing and AI basics.
+ - Conceptualize an AI-driven spatial computing application.
+ ### Tutorial 1:
+ - Basics of Machine Learning (ML) and Deep Learning
+ - Relationship between Machine Learning and Deep Learning, with 
 emphasis on Convolutional Neural Networks (CNNs)
- ⦁ Introduction to YOLO (You Only Look Once)
+ - Introduction to YOLO (You Only Look Once)
  2
 ⦁ Training a custom YOLO object detection model from scratch using 
 Darknet
