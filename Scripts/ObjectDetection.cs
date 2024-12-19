@@ -59,6 +59,24 @@ public class ObjectDetection : MonoBehaviour
             inputTensor.Dispose();
         }
     }
+    Rect ScaleBoundingBox(float x, float y, float width, float height, int imageWidth, int imageHeight, int inputWidth, int inputHeight)
+    {
+        // Scale coordinates back to the original webcam resolution
+        float scaledX = x * imageWidth / inputWidth;
+        float scaledY = y * imageHeight / inputHeight;
+        float scaledWidth = width * imageWidth / inputWidth;
+        float scaledHeight = height * imageHeight / inputHeight;
+    
+        return new Rect(scaledX, scaledY, scaledWidth, scaledHeight);
+    }
+    Vector2 ScreenToCanvasPosition(float x, float y, int canvasWidth, int canvasHeight)
+    {
+        float screenX = x * canvasWidth;
+        float screenY = canvasHeight - (y * canvasHeight); // Invert Y-axis for UI coordinates
+        return new Vector2(screenX, screenY);
+    }
+
+
 
     Tensor PreprocessWebcamInput(WebCamTexture webcam)
     {
@@ -119,9 +137,18 @@ public class ObjectDetection : MonoBehaviour
                 // Scale bounding box from normalized model output to image space
                 Rect boundingBox = ScaleBoundingBox(x, y, width, height, imageWidth, imageHeight, inputWidth, inputHeight);
     
+                // If using a canvas, convert to screen space
+                if (boundingBoxesContainer.GetComponent<Canvas>())
+                {
+                    Vector2 canvasPosition = ScreenToCanvasPosition(boundingBox.x, boundingBox.y, imageWidth, imageHeight);
+                    boundingBox.x = canvasPosition.x;
+                    boundingBox.y = canvasPosition.y;
+                }
+    
                 DisplayBoundingBox(boundingBox, classIndex, confidence);
             }
         }
+
     }
 
 
