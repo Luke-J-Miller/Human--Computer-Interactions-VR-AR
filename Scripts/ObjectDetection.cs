@@ -59,24 +59,6 @@ public class ObjectDetection : MonoBehaviour
             inputTensor.Dispose();
         }
     }
-    Rect ScaleBoundingBox(float x, float y, float width, float height, int imageWidth, int imageHeight, int inputWidth, int inputHeight)
-    {
-        // Scale coordinates back to the original webcam resolution
-        float scaledX = x * imageWidth / inputWidth;
-        float scaledY = y * imageHeight / inputHeight;
-        float scaledWidth = width * imageWidth / inputWidth;
-        float scaledHeight = height * imageHeight / inputHeight;
-    
-        return new Rect(scaledX, scaledY, scaledWidth, scaledHeight);
-    }
-    Vector2 ScreenToCanvasPosition(float x, float y, int canvasWidth, int canvasHeight)
-    {
-        float screenX = x * canvasWidth;
-        float screenY = canvasHeight - (y * canvasHeight); // Invert Y-axis for UI coordinates
-        return new Vector2(screenX, screenY);
-    }
-
-
 
     Tensor PreprocessWebcamInput(WebCamTexture webcam)
     {
@@ -103,6 +85,25 @@ public class ObjectDetection : MonoBehaviour
         return input;
     }
 
+    Rect ScaleBoundingBox(float x, float y, float width, float height, int imageWidth, int imageHeight, int inputWidth, int inputHeight)
+    {
+        // Scale coordinates back to the original webcam resolution
+        float scaledX = x * imageWidth / inputWidth;
+        float scaledY = y * imageHeight / inputHeight;
+        float scaledWidth = width * imageWidth / inputWidth;
+        float scaledHeight = height * imageHeight / inputHeight;
+
+        return new Rect(scaledX, scaledY, scaledWidth, scaledHeight);
+    }
+
+    Vector2 ScreenToCanvasPosition(float x, float y, int canvasWidth, int canvasHeight)
+    {
+        // Convert from screen space to canvas space
+        float screenX = x * canvasWidth;
+        float screenY = canvasHeight - (y * canvasHeight); // Invert Y-axis for UI coordinates
+        return new Vector2(screenX, screenY);
+    }
+
     void ProcessModelOutput(Tensor output)
     {
         // Clear previous bounding boxes
@@ -110,15 +111,15 @@ public class ObjectDetection : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-    
+
         // Model input dimensions
         int inputWidth = 320;  // Adjust based on your model
         int inputHeight = 320;
-    
+
         // Webcam dimensions
         int imageWidth = webcamTexture.width;
         int imageHeight = webcamTexture.height;
-    
+
         // Iterate through the model's output
         int detectionCount = 10; // Adjust based on your model's output format
         for (int i = 0; i < detectionCount; i++)
@@ -130,13 +131,13 @@ public class ObjectDetection : MonoBehaviour
             float height = output[i * 6 + 3]; // Normalized Height
             float confidence = output[i * 6 + 4]; // Confidence
             int classIndex = (int)output[i * 6 + 5]; // Class index
-    
+
             // Only display confident detections
             if (confidence > 0.5f)
             {
                 // Scale bounding box from normalized model output to image space
                 Rect boundingBox = ScaleBoundingBox(x, y, width, height, imageWidth, imageHeight, inputWidth, inputHeight);
-    
+
                 // If using a canvas, convert to screen space
                 if (boundingBoxesContainer.GetComponent<Canvas>())
                 {
@@ -144,13 +145,11 @@ public class ObjectDetection : MonoBehaviour
                     boundingBox.x = canvasPosition.x;
                     boundingBox.y = canvasPosition.y;
                 }
-    
+
                 DisplayBoundingBox(boundingBox, classIndex, confidence);
             }
         }
-
     }
-
 
     void DisplayBoundingBox(Rect boundingBox, int classIndex, float confidence)
     {
