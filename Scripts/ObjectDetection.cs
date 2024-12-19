@@ -14,6 +14,20 @@ public class ObjectDetection : MonoBehaviour
     private IWorker worker;                  // Barracuda worker for executing the model
     private WebCamTexture webcamTexture;     // Webcam feed texture
 
+    // Hardcoded labels
+    private string[] labels = new string[]
+    {
+        "person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat", "traffic light",
+        "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat", "dog", "horse", "sheep", "cow",
+        "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella", "handbag", "tie", "suitcase", "frisbee",
+        "skis", "snowboard", "sports ball", "kite", "baseball bat", "baseball glove", "skateboard", "surfboard",
+        "tennis racket", "bottle", "wine glass", "cup", "fork", "knife", "spoon", "bowl", "banana", "apple",
+        "sandwich", "orange", "broccoli", "carrot", "hot dog", "pizza", "donut", "cake", "chair", "couch",
+        "potted plant", "bed", "dining table", "toilet", "tv", "laptop", "mouse", "remote", "keyboard",
+        "cell phone", "microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase",
+        "scissors", "teddy bear", "hair drier", "toothbrush"
+    };
+
     void Start()
     {
         // Load the model
@@ -62,10 +76,9 @@ public class ObjectDetection : MonoBehaviour
                 int pixelIndex = y * webcam.width + x;
                 Color32 pixel = pixels[pixelIndex];
 
-                // Normalize pixel values to [0, 1]
-                input[0, y, x, 0] = pixel.r / 255.0f; // Red channel
-                input[0, y, x, 1] = pixel.g / 255.0f; // Green channel
-                input[0, y, x, 2] = pixel.b / 255.0f; // Blue channel
+                input[0, y, x, 0] = pixel.r / 255.0f; // Normalize Red channel
+                input[0, y, x, 1] = pixel.g / 255.0f; // Normalize Green channel
+                input[0, y, x, 2] = pixel.b / 255.0f; // Normalize Blue channel
             }
         }
 
@@ -80,26 +93,38 @@ public class ObjectDetection : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        // Parse the output tensor to extract detection results
-        int detectionCount = (int)output[0]; // Placeholder: adjust based on model format
+        // Iterate through the model's output
+        int detectionCount = 10; // Adjust based on your model
         for (int i = 0; i < detectionCount; i++)
         {
-            // Extract bounding box data and confidence scores
-            float x = output[i * 6 + 1]; // Placeholder: model-specific
-            float y = output[i * 6 + 2]; // Placeholder: model-specific
-            float width = output[i * 6 + 3]; // Placeholder: model-specific
-            float height = output[i * 6 + 4]; // Placeholder: model-specific
-            float confidence = output[i * 6 + 5]; // Placeholder: confidence score
+            // Extract bounding box data
+            float x = output[i * 6 + 0]; // Adjust indices based on model format
+            float y = output[i * 6 + 1];
+            float width = output[i * 6 + 2];
+            float height = output[i * 6 + 3];
+            float confidence = output[i * 6 + 4];
+            int classIndex = (int)output[i * 6 + 5];
 
-            // Display bounding boxes for confident detections
-            if (confidence > 0.5f) // Confidence threshold
+            // Only display confident detections
+            if (confidence > 0.5f)
             {
-                DisplayBoundingBox(new Rect(x, y, width, height), "Object", confidence);
+                Rect boundingBox = ScaleBoundingBox(x, y, width, height, webcamTexture.width, webcamTexture.height);
+                DisplayBoundingBox(boundingBox, classIndex, confidence);
             }
         }
     }
 
-    void DisplayBoundingBox(Rect boundingBox, string label, float confidence)
+    Rect ScaleBoundingBox(float x, float y, float width, float height, int imageWidth, int imageHeight)
+    {
+        float scaledX = x * imageWidth;
+        float scaledY = y * imageHeight;
+        float scaledWidth = width * imageWidth;
+        float scaledHeight = height * imageHeight;
+
+        return new Rect(scaledX, scaledY, scaledWidth, scaledHeight);
+    }
+
+    void DisplayBoundingBox(Rect boundingBox, int classIndex, float confidence)
     {
         // Instantiate a bounding box prefab
         GameObject box = Instantiate(boundingBoxPrefab, boundingBoxesContainer);
@@ -111,7 +136,7 @@ public class ObjectDetection : MonoBehaviour
 
         // Set the label text
         Text labelText = box.GetComponentInChildren<Text>();
-        labelText.text = $"{label} ({confidence:P1})";
+        labelText.text = $"{labels[classIndex]} ({confidence:P1})";
     }
 
     void OnDestroy()
