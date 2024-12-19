@@ -86,43 +86,52 @@ public class ObjectDetection : MonoBehaviour
     }
 
     void ProcessModelOutput(Tensor output)
+{
+    // Clear previous bounding boxes
+    foreach (Transform child in boundingBoxesContainer)
     {
-        // Clear previous bounding boxes
-        foreach (Transform child in boundingBoxesContainer)
-        {
-            Destroy(child.gameObject);
-        }
+        Destroy(child.gameObject);
+    }
 
-        // Iterate through the model's output
-        int detectionCount = 10; // Adjust based on your model
-        for (int i = 0; i < detectionCount; i++)
-        {
-            // Extract bounding box data
-            float x = output[i * 6 + 0]; // Adjust indices based on model format
-            float y = output[i * 6 + 1];
-            float width = output[i * 6 + 2];
-            float height = output[i * 6 + 3];
-            float confidence = output[i * 6 + 4];
-            int classIndex = (int)output[i * 6 + 5];
+    // Model input dimensions
+    int inputWidth = 320;  // Adjust based on your model
+    int inputHeight = 320;
 
-            // Only display confident detections
-            if (confidence > 0.5f)
+    // Webcam dimensions
+    int imageWidth = webcamTexture.width;
+    int imageHeight = webcamTexture.height;
+
+    // Iterate through the model's output
+    int detectionCount = 10; // Adjust based on your model's output format
+    for (int i = 0; i < detectionCount; i++)
+    {
+        // Extract bounding box data
+        float x = output[i * 6 + 0]; // Normalized X
+        float y = output[i * 6 + 1]; // Normalized Y
+        float width = output[i * 6 + 2]; // Normalized Width
+        float height = output[i * 6 + 3]; // Normalized Height
+        float confidence = output[i * 6 + 4]; // Confidence
+        int classIndex = (int)output[i * 6 + 5]; // Class index
+
+        // Only display confident detections
+        if (confidence > 0.5f)
+        {
+            // Scale bounding box from normalized model output to image space
+            Rect boundingBox = ScaleBoundingBox(x, y, width, height, imageWidth, imageHeight, inputWidth, inputHeight);
+
+            // If using a canvas, convert to screen space
+            if (boundingBoxesContainer.GetComponent<Canvas>())
             {
-                Rect boundingBox = ScaleBoundingBox(x, y, width, height, webcamTexture.width, webcamTexture.height);
-                DisplayBoundingBox(boundingBox, classIndex, confidence);
+                Vector2 canvasPosition = ScreenToCanvasPosition(boundingBox.x, boundingBox.y, imageWidth, imageHeight);
+                boundingBox.x = canvasPosition.x;
+                boundingBox.y = canvasPosition.y;
             }
+
+            DisplayBoundingBox(boundingBox, classIndex, confidence);
         }
     }
+}
 
-    Rect ScaleBoundingBox(float x, float y, float width, float height, int imageWidth, int imageHeight)
-    {
-        float scaledX = x * imageWidth;
-        float scaledY = y * imageHeight;
-        float scaledWidth = width * imageWidth;
-        float scaledHeight = height * imageHeight;
-
-        return new Rect(scaledX, scaledY, scaledWidth, scaledHeight);
-    }
 
     void DisplayBoundingBox(Rect boundingBox, int classIndex, float confidence)
     {
