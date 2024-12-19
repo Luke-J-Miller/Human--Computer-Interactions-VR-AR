@@ -21,14 +21,13 @@ public class ObjectDetection : MonoBehaviour
         webcamTexture.Play();
     }
 
-
     void Update()
     {
         // Process the webcam feed
         if (webcamTexture.didUpdateThisFrame)
         {
             // Convert the webcam frame to a format usable by the model
-            var input = new Tensor(webcamTexture.height, webcamTexture.width, 3); 
+            var input = new Tensor(webcamTexture.height, webcamTexture.width, 3);
             Color32[] pixels = webcamTexture.GetPixels32();
             for (int i = 0; i < pixels.Length; i++)
             {
@@ -52,6 +51,3 @@ public class ObjectDetection : MonoBehaviour
         worker.Dispose();
     }
 }
-
-
-
