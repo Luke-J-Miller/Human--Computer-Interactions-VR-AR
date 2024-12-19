@@ -3,7 +3,7 @@ using Unity.Sentis;
 using UnityEngine.UI;
 using System.Linq;
 
-public class ObjectDetectionSentis : MonoBehaviour
+public class ObjectDetection : MonoBehaviour
 {
     public NNModel modelAsset;               // Assign your ONNX model
     public GameObject boundingBoxPrefab;     // Prefab for bounding boxes
