@@ -1,26 +1,25 @@
 using UnityEngine;
 using Unity.Sentis;
 using UnityEngine.UI;
-using System.Linq;
 
 public class ObjectDetection : MonoBehaviour
 {
     public NNModel modelAsset;               // Assign your ONNX model
+    public Material webcamMaterial;          // Material for displaying webcam feed
     public GameObject boundingBoxPrefab;     // Prefab for bounding boxes
     public Transform boundingBoxesContainer; // Parent container for bounding boxes
-    public Material webcamMaterial;          // Material to display webcam feed
 
-    private Model runtimeModel;
-    private Worker worker;
-    private WebCamTexture webcamTexture;
+    private Model runtimeModel;              // Sentis runtime model
+    private IWorker worker;                  // Sentis worker for inference
+    private WebCamTexture webcamTexture;     // Webcam feed texture
 
     void Start()
     {
-        // Load the ONNX model and create a worker
+        // Load the ONNX model and create a Sentis worker
         runtimeModel = ModelLoader.Load(modelAsset);
         worker = WorkerFactory.CreateWorker(BackendType.Compute, runtimeModel);
 
-        // Start the webcam feed
+        // Initialize the webcam feed
         webcamTexture = new WebCamTexture();
         webcamMaterial.mainTexture = webcamTexture;
         webcamTexture.Play();
@@ -28,30 +27,35 @@ public class ObjectDetection : MonoBehaviour
 
     void Update()
     {
+        // Ensure the webcam feed has new frames
         if (webcamTexture.didUpdateThisFrame)
         {
-            // Preprocess webcam frame for the model
+            // Preprocess the webcam frame
             Tensor inputTensor = PreprocessWebcamInput(webcamTexture);
 
-            // Perform inference
-            Tensor output = worker.Execute(inputTensor).PeekOutput();
+            // Run inference
+            worker.Execute(inputTensor);
 
-            // Parse and display results
-            ProcessModelOutput(output);
+            // Retrieve the model's output tensor
+            Tensor output = worker.PeekOutput();
 
-            // Release tensor memory
+            // Parse and display the output
+            DisplayDetections(output);
+
+            // Dispose of input tensor to free memory
             inputTensor.Dispose();
         }
     }
 
     Tensor PreprocessWebcamInput(WebCamTexture webcam)
     {
-        int inputWidth = 320;  // Adjust based on model requirements
-        int inputHeight = 320;
+        // Resize and normalize webcam input to match the model's expected input size
+        int inputWidth = 320;  // Replace with your model's input width
+        int inputHeight = 320; // Replace with your model's input height
 
-        // Resize and normalize webcam frame
         Tensor inputTensor = new Tensor(1, inputHeight, inputWidth, 3);
         Color32[] pixels = webcam.GetPixels32();
+
         for (int y = 0; y < inputHeight; y++)
         {
             for (int x = 0; x < inputWidth; x++)
@@ -64,59 +68,66 @@ public class ObjectDetection : MonoBehaviour
                 inputTensor[0, y, x, 2] = pixel.b / 255.0f; // Normalize Blue channel
             }
         }
+
         return inputTensor;
     }
 
-    void ProcessModelOutput(Tensor output)
+    void DisplayDetections(Tensor output)
     {
-        // Clear previous bounding boxes
+        // Clear existing bounding boxes
         foreach (Transform child in boundingBoxesContainer)
         {
             Destroy(child.gameObject);
         }
 
-        // Parse bounding boxes from model output
-        int detectionCount = 10; // Adjust based on your model output format
+        // Example: Assuming model output is structured as [x, y, width, height, confidence, classIndex]
+        int detectionCount = 10; // Adjust based on your model's output format
         for (int i = 0; i < detectionCount; i++)
         {
-            float x = output[i * 6 + 0]; // Normalized X
-            float y = output[i * 6 + 1]; // Normalized Y
-            float width = output[i * 6 + 2];
-            float height = output[i * 6 + 3];
-            float confidence = output[i * 6 + 4];
-            int classIndex = (int)output[i * 6 + 5];
+            float x = output[i * 6 + 0]; // Normalized X-coordinate
+            float y = output[i * 6 + 1]; // Normalized Y-coordinate
+            float width = output[i * 6 + 2]; // Normalized width
+            float height = output[i * 6 + 3]; // Normalized height
+            float confidence = output[i * 6 + 4]; // Confidence score
+            int classIndex = (int)output[i * 6 + 5]; // Class index
 
-            if (confidence > 0.5f)
+            if (confidence > 0.5f) // Filter by confidence threshold
             {
-                Rect boundingBox = ScaleBoundingBox(x, y, width, height, webcamTexture.width, webcamTexture.height, 320, 320);
-                DisplayBoundingBox(boundingBox, classIndex, confidence);
+                Rect boundingBox = ScaleBoundingBox(x, y, width, height, webcamTexture.width, webcamTexture.height);
+                CreateBoundingBox(boundingBox, classIndex, confidence);
             }
         }
     }
 
-    Rect ScaleBoundingBox(float x, float y, float width, float height, int imageWidth, int imageHeight, int inputWidth, int inputHeight)
+    Rect ScaleBoundingBox(float x, float y, float width, float height, int imageWidth, int imageHeight)
     {
-        float scaledX = x * imageWidth / inputWidth;
-        float scaledY = y * imageHeight / inputHeight;
-        float scaledWidth = width * imageWidth / inputWidth;
-        float scaledHeight = height * imageHeight / inputHeight;
+        // Scale bounding box from normalized coordinates to image space
+        float scaledX = x * imageWidth;
+        float scaledY = y * imageHeight;
+        float scaledWidth = width * imageWidth;
+        float scaledHeight = height * imageHeight;
 
         return new Rect(scaledX, scaledY, scaledWidth, scaledHeight);
     }
 
-    void DisplayBoundingBox(Rect boundingBox, int classIndex, float confidence)
+    void CreateBoundingBox(Rect boundingBox, int classIndex, float confidence)
     {
+        // Instantiate a bounding box prefab
         GameObject box = Instantiate(boundingBoxPrefab, boundingBoxesContainer);
+
+        // Adjust its position and size
         RectTransform rectTransform = box.GetComponent<RectTransform>();
         rectTransform.anchoredPosition = new Vector2(boundingBox.x, boundingBox.y);
         rectTransform.sizeDelta = new Vector2(boundingBox.width, boundingBox.height);
 
+        // Update the label text
         Text labelText = box.GetComponentInChildren<Text>();
-        labelText.text = $"Class: {classIndex} ({confidence:P1})";
+        labelText.text = $"Class: {classIndex}, Confidence: {confidence:P1}";
     }
 
     void OnDestroy()
     {
+        // Dispose of the worker to release resources
         worker.Dispose();
     }
 }
