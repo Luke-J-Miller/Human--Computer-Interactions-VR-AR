@@ -1,6 +1,7 @@
 # Interactive Learning with AR
 ## Weekend 1: Foundations of Unity and ML Integration
-### Day 1: Setting Up and Unity Basics
+[Lesson Slides](https://docs.google.com/presentation/d/1utVYhSMCL8EviY2QNkuyc3JoUDwlz9j4vyebENd_kko/edit?usp=sharing)
+### Session 1: Setting Up and Unity Basics
 - Objective: Introduce Unity and build a basic interactive scene.
 
 #### Getting Started with Unity
