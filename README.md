@@ -16,7 +16,7 @@
 #### Hands-On:
 - Create a virtual room with basic interactive objects (e.g., a button that triggers an animation).
 
-### Day 2: ML Basics and Unity Integration
+### Session 2: ML Basics and Unity Integration
 - Objective: Introduce ML concepts and incorporate them into Unity.
 
 #### Introduction to ML for Non-Programmers
@@ -32,7 +32,7 @@ How ML models process images and make predictions.
 - Create a Unity scene with a live camera feed and an object detection model that highlights detected objects in AR.
 
 ## Weekend 2: Building the Final AR Project
-### Day 3: AR Development with Meta Oculuses
+### Session 3: AR Development with Meta Oculuses
 - Objective: Set up the Meta Oculus for AR and begin adding AR functionality.
 
 #### Introduction to AR with Unity
