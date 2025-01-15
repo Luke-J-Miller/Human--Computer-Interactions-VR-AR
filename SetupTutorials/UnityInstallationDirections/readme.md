@@ -49,7 +49,7 @@ Proceed until you see the window that prompts you to install the Unity Editor, w
 ## Install the Unity Editor
 Once you're in the Unity Hub, it will guide you to install the latest long-term support (LTS) version of the Unity Editor. Each LTS version is our most recent, fully-tested version. 
 The prompt to install the latest long-term support release of the Unity Editor, which appears when you launch the Unity Hub for the first time.
-1. Select Install Unity Editor to download and install the latest LTS version of the Unity Editor. **Note**: The Unity Editor is a large and powerful application! The download and installation process will take some time.
+1. Select Install Unity Editor to download and install the latest LTS version of the Unity Editor. Additionally, there should be an option to include the 'Android SDK' with the download. This is helpful, but it can easily be added later. **Note**: The Unity Editor is a large and powerful application! The download and installation process will take some time.
    ![image](https://github.com/user-attachments/assets/e74b4d49-fa19-481e-94fd-a18c898dc927)
 
 3. When the process is complete, this version of the Unity Editor will appear on the Installs tab of the Unity Hub.
