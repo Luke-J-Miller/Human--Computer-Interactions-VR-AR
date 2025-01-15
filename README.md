@@ -1,12 +1,26 @@
 # Interactive Learning with AR
 
+## Time and Location
+
+### Class Dates and Hours:
+Instruction times will be from 9 AM to 12 PM, with potential extended hours if any students require additional help.  
+- **Session 1**: January 25, 2025, 9 AM to 12 PM    
+- **Session 2**: February 1, 2025, 9 AM to 12 PM  
+
+### Location:
+Flarsheim Hall #460
+Zoom (only for MU students):  [Zoom Link](https://umsystem.zoom.us/j/2174320035?pwd=b1lRVTZ1enpYYWQ3dzVacFBiRC9CUT09) (Passcode: UMKC)
+
+For further information, students can contact:
+
+Dr. Lee: [leeyu@umkc.edu](leeyu@umkc.edu)
+Mr. Luke Miller: [ljmbm5@mizzou.edu](ljmbm5@mizzou.edu)
+### Logistic Support:
+For issues such as the computer lab setup or light breakfast arrangements, please reach out to Mr. Preston Sands at [pdsands@umkc.edu](pdsands@umkc.edu).
+  
+
 ## Course Overview:
 Welcome to **Interactive Learning with AR**, a hands-on course exploring the integration of AI and deep learning within spatial computing, with a focus on developing AR/VR applications. Participants will gain a comprehensive understanding of spatial computing concepts, deep learning algorithms, and their practical deployment in AR/VR environments.
-
-**Course Dates and Location**:  
-- **Session 1**: January 25, 2025  
-- **Session 2**: February 1, 2025  
-- **Location**: Flarsheim Hall, University of Missouri - Kansas City  
 
 ### **Course Objectives**:
 1. Understand spatial computing foundations and the role of AI and deep learning.  
