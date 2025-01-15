@@ -37,7 +37,7 @@ Students are encouraged to read the "[Student Preparation](https://github.com/Lu
 
 ## Lesson Topics:
 
-### **Session 1: Setting Up and Unity Basics**
+### **[Session 1](https://docs.google.com/presentation/d/1utVYhSMCL8EviY2QNkuyc3JoUDwlz9j4vyebENd_kko/edit?usp=sharing): Setting Up and Unity Basics**
 - Introduction to Unity:
   - Overview of Unity and its role in AR/VR development.
   - Navigating the Unity interface.
@@ -49,7 +49,7 @@ Students are encouraged to read the "[Student Preparation](https://github.com/Lu
   - Adding interactive behavior using C# scripts.
 - [Day 1 Tutorial](https://docs.google.com/presentation/d/1Y3cza8zijudi5H94pD02mJVoUkspxiIu7tfud0khCfs/edit?usp=sharing)
 
-### **Session 2: ML Basics and Oculus Integration**
+### **[Session 2](https://docs.google.com/presentation/d/1utVYhSMCL8EviY2QNkuyc3JoUDwlz9j4vyebENd_kko/edit?usp=sharing): ML Basics and Oculus Integration**
 - Introduction to Machine Learning:
   - Key concepts of supervised and unsupervised learning.
   - Applications of ML in AR/VR.
