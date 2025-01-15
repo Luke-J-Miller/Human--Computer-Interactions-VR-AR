@@ -1,4 +1,6 @@
 # Interactive Learning with AR
+## Preparation:
+Students are encouraged to read the "[Student Preparation](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/Student%20Preparation)" readme.  This contains valuable information on how to setup accounts that will streamline the learning experience.  Additionally, students are encouraged to bring their own equipment (computers, headsets, cables) so that staff can assist the students getting everything setup for the student to continue and build off of the course.  We have included information on the minimum requirements for computers.
 ## Weekend 1: Foundations of Unity and ML Integration
 [Lesson Slides](https://docs.google.com/presentation/d/1utVYhSMCL8EviY2QNkuyc3JoUDwlz9j4vyebENd_kko/edit?usp=sharing)
 ### Session 1: Setting Up and Unity Basics
