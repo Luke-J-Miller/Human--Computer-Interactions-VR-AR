@@ -8,7 +8,8 @@ Instruction times will be from 9 AM to 12 PM, with potential extended hours if a
 - **Session 2**: February 1, 2025, 9 AM to 12 PM  
 
 ### Location:
-Flarsheim Hall #460
+Flarsheim Hall #460  
+  
 Zoom (only for MU students):  [Zoom Link](https://umsystem.zoom.us/j/2174320035?pwd=b1lRVTZ1enpYYWQ3dzVacFBiRC9CUT09) (Passcode: UMKC)
 
 For further information, students can contact:
