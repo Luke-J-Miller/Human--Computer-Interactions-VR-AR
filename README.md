@@ -8,17 +8,14 @@ Instruction times will be from 9 AM to 12 PM, with potential extended hours if a
 - **Session 2**: February 1, 2025, 9 AM to 12 PM  
 
 ### Location:
-Flarsheim Hall #460  
-  
-Zoom (only for MU students):  [Zoom Link](https://umsystem.zoom.us/j/2174320035?pwd=b1lRVTZ1enpYYWQ3dzVacFBiRC9CUT09) (Passcode: UMKC)
++ Flarsheim Hall #460  
++ Zoom (only for MU students):  [Zoom Link](https://umsystem.zoom.us/j/2174320035?pwd=b1lRVTZ1enpYYWQ3dzVacFBiRC9CUT09) (Passcode: UMKC)
 
-For further information, students can contact:
-
-Dr. Lee: [leeyu@umkc.edu](leeyu@umkc.edu)  
-  
-Mr. Luke Miller: [ljmbm5@mizzou.edu](ljmbm5@mizzou.edu)
+### For further information, students can contact:
++ Dr. Lee: [leeyu@umkc.edu](leeyu@umkc.edu)  
++ Mr. Luke Miller: [ljmbm5@mizzou.edu](ljmbm5@mizzou.edu)
 ### Logistic Support:
-For issues such as the computer lab setup or light breakfast arrangements, please reach out to Mr. Preston Sands at [pdsands@umkc.edu](pdsands@umkc.edu).
++ For issues such as the computer lab setup or light breakfast arrangements, please reach out to Mr. Preston Sands at [pdsands@umkc.edu](pdsands@umkc.edu).
   
 
 ## Course Overview:
