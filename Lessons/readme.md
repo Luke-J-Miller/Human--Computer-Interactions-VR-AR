@@ -7,7 +7,7 @@ On day 1:
 + VR Best Practices
 + Comparison of VR Platforms
   
-[Hands-on](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/SetupTutorials)
+[Hands-on Tutorial 1](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/SetupTutorials)
 
 On day 2:
 + Basics of Machine Learning
@@ -16,5 +16,5 @@ On day 2:
 + Pre-trained Models
 + VR-ML Tasks
     
-  [Hands-on](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/SetupTutorials)
+[Hands-on Tutorial 2](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/SetupTutorials)
 
