@@ -65,35 +65,54 @@ If you encounter any issues during the account creation process, contact the cou
 
 
 
-# Additional Information for Students Bringing Their Own Hardware
+# Hardware Requirements and Setup for Students Bringing Their Own Equipment
+If you plan to bring your own computer to the course, follow the instructions below to ensure compatibility and proper setup. Using your own hardware can enhance your experience, but it requires meeting specific requirements and completing the necessary setup steps.  
 
-If you plan to use your own computer for the course, please ensure it meets the minimum requirements outlined below. Using compatible hardware will allow you to fully engage with the course content and live testing.
+If you are bringing your own headset, we will work with Oculus Quest 2 or 3.  The tutorials for the course are specifically designed with Oculus in mind, so we cannot support other headset manufacturers (Sony, Apple, HTC, etc).
 
 ---
 
 ## Minimum Computer Requirements
 
 ### 1. Unity System Requirements
-- Refer to Unity's official hardware requirements:  
+- Review Unity's hardware requirements:  
   [Unity System Requirements](https://docs.unity3d.com/6000.0/Documentation/Manual/system-requirements.html#editor)
 
 ### 2. Oculus Rift/Link System Requirements
-- Refer to Meta's Oculus Link requirements:  
+- Review Meta's Oculus Link requirements:  
   [Oculus Link Minimum Requirements](https://www.meta.com/help/quest/articles/headsets-and-accessories/oculus-rift-s/rift-s-minimum-requirements/?utm_source=docs.unity3d.com&utm_medium=oculusredirect)
+
+---
+
+## Setup Instructions
+
+### Unity Hub and Editor Installation
+- Follow the Unity Hub and Editor installation guide available here:  
+  [Unity Installation Directions](https://github.com/Luke-J-Miller/Human--Computer-Interactions-VR-AR/tree/main/SetupTutorials/UnityInstallationDirections)
+
+### Oculus Link Installation
+- Watch this video for detailed instructions on installing Oculus Link software:  
+  [How to Install Oculus Link](https://www.youtube.com/watch?v=9HfLWkm8zCI)
+- **Note**: If you are bringing a computer but not a headset, you can install the Oculus software after creating your Meta account.
+
+### Detailed Setup Instructions
+- Refer to the **Day 1 Tutorial** for detailed setup instructions:  
+  [Day 1 Tutorial Slides](https://docs.google.com/presentation/d/1Y3cza8zijudi5H94pD02mJVoUkspxiIu7tfud0khCfs/edit?usp=sharing)  
+  - Pay special attention to the first **10 slides**, which cover key setup steps.
 
 ---
 
 ## Important Notes for Oculus Link Users
 
 1. **Operating System Compatibility**:
-   - Oculus Link **only works with Windows systems**.
-   - If your computer does not meet the requirements for Oculus Link, you can still use Unity to build and deploy applications directly to the headset. However, **live testing will not be supported**.
+   - Oculus Link is only compatible with **Windows systems**.
+   - If your computer does not meet the requirements for Oculus Link, you can still build and deploy projects to the headset via Unity, but **live testing will not be supported**.
 
 2. **USB Cable Requirements**:
-   - The staff has **6 Link cables** available for shared use during class.
-   - If you prefer to bring your own cable, ensure it meets the following specifications:
+   - The course staff has **6 Link cables** available for shared use during class.
+   - If you bring your own cable, ensure it meets these specifications:
      - **USB 3.0** with a transfer speed of at least **5 Gbps**.
-     - Designed specifically for Oculus Link is strongly recommended.
+     - Designed specifically for Oculus Link is highly recommended.
    - **Cables shorter than 6 feet will not be allowed for live testing**.
 
 ---
@@ -101,7 +120,8 @@ If you plan to use your own computer for the course, please ensure it meets the 
 ## Testing Recommendations
 
 - Test your setup with Unity and Oculus Link before the first class.
-- Ensure you have the necessary software installed and that your hardware is compatible.
+- Ensure all required software is installed and working properly.
+- Bring your account credentials (Meta and Unity) to every class.
 
-If you have questions about your setup or need assistance verifying compatibility, contact the course staff.
+If you have questions or need assistance with your setup, contact the course staff.
 
