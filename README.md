@@ -1,5 +1,19 @@
 # Interactive Learning with AR
 
+## Course Overview:
+Welcome to **Interactive Learning with AR**, a hands-on course exploring the integration of AI and deep learning within spatial computing, with a focus on developing AR/VR applications. Participants will gain a comprehensive understanding of spatial computing concepts, deep learning algorithms, and their practical deployment in AR/VR environments.
+
+**Course Dates and Location**:  
+- **Session 1**: January 25, 2025  
+- **Session 2**: February 1, 2025  
+- **Location**: Flarsheim Hall, University of Missouri - Kansas City  
+
+### **Course Objectives**:
+1. Understand spatial computing foundations and the role of AI and deep learning.  
+2. Develop AR/VR applications with Unity integrating AI.  
+3. Enhance problem-solving, creativity, and communication skills through spatial computing.  
+
+
 ## Instructor Information:
 **Yugyung Lee, PhD**  
 Professor of Computer Science  
