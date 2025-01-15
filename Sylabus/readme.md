@@ -1,4 +1,5 @@
-# **Interactive Learning with AR: Course Syllabus**
+# Center of Excellence for Spatial Computing (COESC)
+## Spring 2025: Interactive Learning with Virtual Reality & Machine Learning
 
 ## **Course Overview**
 This course explores the integration of AI and deep learning within spatial computing, focusing on AR/VR application development. Participants will gain a comprehensive understanding of spatial computing concepts, deep learning algorithms, and their deployment in AR/VR environments.
