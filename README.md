@@ -13,7 +13,8 @@ Zoom (only for MU students):  [Zoom Link](https://umsystem.zoom.us/j/2174320035?
 
 For further information, students can contact:
 
-Dr. Lee: [leeyu@umkc.edu](leeyu@umkc.edu)
+Dr. Lee: [leeyu@umkc.edu](leeyu@umkc.edu)  
+  
 Mr. Luke Miller: [ljmbm5@mizzou.edu](ljmbm5@mizzou.edu)
 ### Logistic Support:
 For issues such as the computer lab setup or light breakfast arrangements, please reach out to Mr. Preston Sands at [pdsands@umkc.edu](pdsands@umkc.edu).
