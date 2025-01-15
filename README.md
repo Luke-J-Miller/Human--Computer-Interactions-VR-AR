@@ -7,10 +7,10 @@ University of Missouri - Kansas City
 Email: leeyu@umkc.edu  
 Phone: 816-235-5932     
   
-**Luke Miller, MSCS**
-PhD Student
-University of Missouri - Kansas City
-Email: ljmbm5@umkc.edu
+**Luke Miller, MSCS**  
+PhD Student  
+University of Missouri - Kansas City  
+Email: ljmbm5@umkc.edu  
 
 ---
 
