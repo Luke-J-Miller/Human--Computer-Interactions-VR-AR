@@ -5,12 +5,13 @@
 Professor of Computer Science  
 University of Missouri - Kansas City  
 Email: leeyu@umkc.edu  
-Phone: 816-235-5932   
+Phone: 816-235-5932     
   
-**Luke Miller, MSCS**  
+**Luke Miller, MSCS**
 PhD Student
-University of Missouri - Kansas City  
-Email: ljmbm5@umkc.edu  
+University of Missouri - Kansas City
+Email: ljmbm5@umkc.edu
+
 ---
 
 ## Preparation:
