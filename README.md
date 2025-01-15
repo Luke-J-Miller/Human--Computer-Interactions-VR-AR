@@ -1,4 +1,5 @@
-# Interactive Learning with AR
+# Center of Excellence for Spatial Computing (COESC)
+## Spring 2025: Interactive Learning with Virtual Reality & Machine Learning
 
 ## Time and Location
 
