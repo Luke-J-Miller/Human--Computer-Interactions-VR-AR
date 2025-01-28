@@ -82,6 +82,8 @@ Students are encouraged to read the "[Student Preparation](https://github.com/Lu
 
 # Examples of Projects for Oculus and VR/AR
 Here's a great tutorial series for development of VR projects [VR Development Full Course: Oculus Quest](https://www.youtube.com/playlist?list=PLi-PVxA9VifcdqzeQ1bkV_T5B-YuLKNII)
+This basic course gives more examples of how to use Machine Learning in VR [Unity Machine Learning with ML-Agents](https://www.youtube.com/playlist?list=PLQMQNmwN3FvzY_J21RPTBYvJ-43uRAJKS)
+Here, we get into true Augmented Reality [Augmented Reality(AR) tutorial with Unity (Make Real world Applications)](https://www.youtube.com/playlist?list=PLb1h4A0yB978SQuAeBsxup--7ITPCashH)
 
 ---
 
