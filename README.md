@@ -77,6 +77,12 @@ Students are encouraged to read the "[Student Preparation](https://github.com/Lu
   - Best practices for performance optimization in VR.
 - [Day 2 Tutorial](https://docs.google.com/presentation/d/19WS5syjc_-pRmuItQGxl4eUanslJmr0OKvpAUZAHwFE/edit?usp=sharing)
 
+
+
+
+# Examples of Projects for Oculus and VR/AR
+Here's a great tutorial series for development of VR projects [VR Development Full Course: Oculus Quest](https://www.youtube.com/playlist?list=PLi-PVxA9VifcdqzeQ1bkV_T5B-YuLKNII)
+
 ---
 
 For any questions or further guidance, please contact the course staff.
