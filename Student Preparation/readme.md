@@ -66,6 +66,7 @@ If you encounter any issues during the account creation process, contact the cou
 
 
 # Hardware Requirements and Setup for Students Bringing Their Own Equipment
+Ahmed recorded [videos](https://app.box.com/folder/314854117578 ) on installing unity.
 If you plan to bring your own computer to the course, follow the instructions below to ensure compatibility and proper setup. Using your own hardware can enhance your experience, but it requires meeting specific requirements and completing the necessary setup steps.  
 
 If you are bringing your own headset, we will work with Oculus Quest 2 or 3.  The tutorials for the course are specifically designed with Oculus in mind, so we cannot support other headset manufacturers (Sony, Apple, HTC, etc).
